@@ -1,0 +1,80 @@
+@define-color bar-bg rgba(0, 0, 0, 0.5);
+@define-color main-fg #fbd1fc;
+@define-color second #ae62af;
+@define-color focus-b #efe9aa;
+@define-color focus-f black;
+
+* {
+    font-family: "maple mono";
+    font-size: 13px;
+}
+
+window#waybar {
+    background: @bar-bg;
+}
+
+#workspaces button {
+    padding: 0px 2px 0 0;
+    margin: 6px 0 6px 0;
+    border-radius: 4px;
+    color: @main-fg;
+}
+#workspaces button.active {
+    background: @focus-b;
+    color: @focus-f;
+}
+
+#custom-notification,
+#clock,
+#window,
+#cava,
+#custom-spotify,
+#custom-gpuinfo,
+#cpu,
+#memory,
+#disk,
+#pulseaudio,
+#custom-updates
+{
+    margin: 10px 8px 10px 0;
+    color: @main-fg;
+}
+
+#custom-gpuinfo,
+#cpu,
+#memory,
+#disk,
+#pulseaudio {
+    padding-right: 9px;
+    padding-left: 1px;
+    border-right: 2px solid @second;
+}
+
+#custom-gpuinfo{
+    color: #fc9b71;
+}
+#cpu{
+    color: #e7fc71;
+}
+#memory{
+    color: #8ef2d6;
+}
+#disk{
+    color: #ababf4;
+}
+#pulseaudio{
+    color: #f98eb7;
+}
+#custom-updates{
+    color: #8ef295;
+}
+
+
+
+#custom-notification {
+    margin: 0 8px 0 16px;
+}
+
+#custom-updates {
+    margin: 0 16px 0 0;
+}
