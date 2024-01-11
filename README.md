@@ -8,3 +8,6 @@ Hyprdots from prasanthrangan is an amazing rice and I really recomend it.
 
 ## What I changed
 This repository only contains the things that I changed and I provide no install script. The elements that I customized are: The general keybindings and and window rules; The waybar (status bar); The terminal look (kitty); The neovim editor... And a few other tweaks.
+
+## Preview
+![preview](https://github.com/xelox/dotfiles/blob/main/preview.png?raw=true)
