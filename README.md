@@ -7,4 +7,4 @@ And I then learned to customize it further and remove the features that I didn't
 Hyprdots from prasanthrangan is an amazing rice and I really recomend it.  
 
 ## What I changed
-so far I customized: The general keybindings and and window rules; The waybar (status bar); The terminal look (kitty); The neovim editor... And a few other tweaks.
+This repository only contains the things that I changed and I provide no install script. The elements that I customized are: The general keybindings and and window rules; The waybar (status bar); The terminal look (kitty); The neovim editor... And a few other tweaks.
