@@ -1,0 +1,92 @@
+@define-color bar-bg rgba(0, 0, 0, 0.65);
+@define-color main-fg #fbd1fc;
+@define-color second #ae62af;
+@define-color focus-b #efe9aa;
+@define-color focus-f black;
+
+* {
+    font-family: "Maple Mono";
+    font-size: 14px;
+}
+
+window#waybar {
+    background: @bar-bg;
+    font-weight: 800;
+}
+
+#workspaces button {
+    padding: 0px 2px 0 0;
+    margin: 6px 0 6px 0;
+    border-radius: 4px;
+    color: @main-fg;
+}
+
+#window{
+    padding-left: 10px;
+}
+
+#workspaces button.active {
+    background: @focus-b;
+    color: @focus-f;
+}
+
+#custom-notification,
+#clock,
+#window,
+#cava,
+#custom-spotify,
+#custom-gpuinfo,
+#custom-cpuinfo,
+#memory,
+#custom-disktotal,
+#pulseaudio,
+#custom-updates
+{
+    margin: 10px 8px 10px 0;
+    color: @main-fg;
+}
+
+#custom-gpuinfo,
+#custom-cpuinfo,
+#memory,
+#custom-disktotal,
+#pulseaudio {
+    padding-right: 8px;
+    padding-left: 10px;
+    border-left: 1px solid @main-fg;
+}
+
+#custom-gpuinfo {
+    margin-left: 14px;
+}
+
+#custom-kitten {
+    background-image: url('/home/alex/Downloads/discord.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#cpu{
+    color: #e7fc71;
+}
+#memory{
+    color: #8ef2d6;
+}
+#custom-disktotal{
+    color: #ababf4;
+}
+#pulseaudio{
+    color: #f98eb7;
+}
+#custom-updates{
+    color: #8ef295;
+}
+
+#custom-gpuinfo span, #custom-cpuinfo span {
+    transition: 1s
+}
+
+#custom-notification {
+    margin: 0 8px 0 16px;
+}

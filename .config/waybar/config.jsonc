@@ -1,0 +1,323 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+	"modules-left": ["custom/notification", "clock", "hyprland/workspaces", "hyprland/window"],
+	"modules-center": ["cava" ],
+	"modules-right": ["tray", "custom/gpuinfo", "custom/cpuinfo", "memory", "pulseaudio", "custom/updates" ],
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 5
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+    
+    "clock": {
+        "format": "{:%a %d %b %H:%M:%S}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "interval": 1
+    },
+
+    // disktotal is a custom made program that simply check all the disks for available space and sums them up
+    "custom/disktotal": {
+        "exec": "disktotal",
+        "format": "󰇖 {}",
+        "interval": "60"
+    },
+
+
+    "hyprland/window": {
+        "format": ">.{}",
+        "rewrite": { "(.*) [-|—] (.*)": "$1" },
+        "separate-outputs": true,
+        "max-length": 40
+    },
+
+    "custom/kitten": {
+        "format": "    ",
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": " 󰅬 ",
+            "2": " 󰈹 ",
+            "3": " 󰙯 ",
+            "4": "  ",
+            "5": " 󰓓 ",
+            "6": " 󰊖 ",
+            "7": " 󰊪 ",
+            "default": "  "
+        },
+        // "persistent-workspaces": {
+        //     "1": [],
+        //     "2": [],
+        //     "3": [],
+        //     "4": [],
+        //     "5": [],
+        //     "6": [],
+        //     "7": []
+        // }
+    },
+
+    "memory": {
+        "interval": 10,
+        "format": "RAM {used}GiB",
+    },
+
+    "custom/cpuinfo": {
+        "exec": " ~/.local/lib/hyde/cpuinfo.sh",
+        "return-type": "json",
+        "format": "{}",
+        "interval": 1,
+        "tooltip": true
+    },
+
+    "custom/gpuinfo": {
+        "exec": " ~/.local/lib/hyde/gpuinfo.sh",
+        "return-type": "json",
+        "format": "{}",
+        "interval": 1,
+        "tooltip": true
+    },
+
+    "cava": {
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 1,
+        "bars": 16,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": true,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+            "on-click-right": "mode"
+        }
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{}{icon}",
+        "format-icons": {
+            "notification": " 󱅫 ",
+            "none": " 󰂚 ",
+            "dnd-notification": " 󱏧 ",
+            "dnd-none": " 󱏧 ",
+            "inhibited-notification": " 󱏧 ",
+            "inhibited-none": " 󱏧 ",
+            "dnd-inhibited-notification": " 󱏧 ",
+            "dnd-inhibited-none": " 󱏧 "
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "show-passive-items": true,
+        "spacing": 6,
+    }
+}
+
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
+
+
+// positions generated based on config.ctl //
+
+	"modules-left": ["custom/padd","","custom/padd"],
+	"modules-center": ["custom/padd","","custom/padd"],
+	"modules-right": ["custom/padd","","custom/padd"],
+
+
+// sourced from modules based on config.ctl //
+
