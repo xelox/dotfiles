@@ -119,5 +119,6 @@ return {
 	{
 		"windwp/nvim-autopairs", -- auto close brackets, quotation marks etc.
 		event = "InsertEnter",
+		opts = {},
 	},
 }

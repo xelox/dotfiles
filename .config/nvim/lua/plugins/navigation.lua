@@ -49,13 +49,13 @@ return {
 		---@type oil.SetupOpts
 		opts = {
 			git = {
-				mv = function(src_path, dest_path)
+				mv = function(_, _)
 					return true
 				end,
-				add = function(path)
+				add = function(_)
 					return true
 				end,
-				rm = function(path)
+				rm = function(_)
 					return true
 				end,
 			},

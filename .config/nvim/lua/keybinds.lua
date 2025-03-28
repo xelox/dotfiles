@@ -47,12 +47,6 @@ end, "[F]ind [/] in Open Files")
 map("n", "<leader>mdn", ":MarkdownPreview<CR>", "Start Markdown Preview")
 map("n", "<leader>mdn", ":MarkdownPreviewStop<CR>", "Stop Markdown Preview")
 
--- Formatting
-local format_fn = function()
-	require("conform").format({ async = true, lsp_fallback = true })
-end
-map({ "n", "v" }, "<leader>=", format_fn, "Format buffer/selection")
-
 -- Git
 local gitsigns = require("gitsigns")
 map("n", "<leader>tb", gitsigns.toggle_current_line_blame, "[T]oggle git [b]lame line")
