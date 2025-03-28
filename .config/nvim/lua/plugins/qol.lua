@@ -23,6 +23,9 @@ return {
 			multiline_threshold = 1,
 			trim_scope = "inner",
 		},
+		config = function()
+			vim.cmd("TSContextDisable")
+		end,
 		enabled = true,
 	},
 	{

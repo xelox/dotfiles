@@ -18,19 +18,38 @@ return {
 		},
 		config = function()
 			---@diagnostic disable-next-line: missing-fields
-			-- require("nvim-treesitter.configs").setup({
-			-- 	textobjects = {
-			-- 		lsp_interop = {
-			-- 			enable = true,
-			-- 			border = "none",
-			-- 			floating_preview_opts = {},
-			-- 			peek_definition_code = {
-			-- 				["<leader>df"] = "@function.outer",
-			-- 				["<leader>dF"] = "@class.outer",
-			-- 			},
-			-- 		},
-			-- 	},
-			-- })
+			require("nvim-treesitter.configs").setup({
+				textobjects = {
+					move = {
+						enable = true,
+						set_jumps = true, -- whether to set jumps in the jumplist
+						goto_next_start = {
+							["]f"] = { query = "@function.outer", desc = "Next 󰊕 Function" },
+							["]c"] = { query = "@class.outer", desc = "Next 󰠱 Class" },
+							["]s"] = { query = "@local.scope", query_group = "locals", desc = "Next Scope" },
+							["]z"] = { query = "@fold", query_group = "folds", desc = "Next Fold" },
+						},
+						goto_next_end = {
+							["]F"] = { query = "@function.outer", desc = "Next 󰊕 Function End" },
+							["]C"] = { query = "@class.outer", desc = "Next 󰠱 Class End" },
+						},
+						goto_previous_start = {
+							["[f"] = { query = "@function.outer", desc = "Previous 󰊕 Function Start" },
+							["[c"] = { query = "@class.outer", desc = "Previous 󰠱 Class End" },
+							["[s"] = { query = "@local.scope", query_group = "locals", desc = "Previous Scope" },
+						},
+					},
+				},
+				-- swap = {
+				-- 	enable = true,
+				-- 	swap_next = {
+				-- 		["<leader>j"] = "@parameter.inner",
+				-- 	},
+				-- 	swap_previous = {
+				-- 		["<leader>l"] = "@parameter.inner",
+				-- 	},
+				-- },
+			})
 			require("telescope").setup({
 				extensions = {
 					["ui-select"] = {
